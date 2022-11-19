@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "**/__tests__/**",
+    "**/tests/**",
+    "**/dist"
+  ]
+}

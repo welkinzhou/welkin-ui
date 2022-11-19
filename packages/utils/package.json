@@ -1,0 +1,8 @@
+{
+  "name": "@welkin-ui/utils",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "module": "index.ts",
+  "author": "welkinzz",
+  "license": "MIT"
+}
