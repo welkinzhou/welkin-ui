@@ -5,49 +5,51 @@
 </template>
 
 <script lang="ts" setup>
-import { NavRoot } from "./type";
-import { onMounted, watch, reactive, ref, provide } from "vue";
+import { NavRoot } from './type'
+import { watch, reactive, provide } from 'vue'
 
 const props = defineProps({
   defaultActive: {
-    type: [String],
-    default: "",
-  },
-});
+    default: null
+  }
+})
 
-const emits = defineEmits(["select"]);
+const emits = defineEmits(['select'])
 
-const updateActive = (index: string) => {
-  navRoot.activePath = index;
-};
+const updateActive = (index: any) => {
+  navRoot.activePath = index
+}
 
-const handleSelect = (index: string, item: any) => {
-  emits("select", index, item);
-};
+const handleSelect = (index: any, item: any) => {
+  emits('select', index, item)
+}
 
 const navRoot = reactive<NavRoot>({
-  activePath: "",
+  activePath: '',
   updateActive,
   handleSelect,
-  children: [],
-});
+  children: []
+})
 
-onMounted(() => {
-  navRoot.activePath = props.defaultActive;
-});
+watch(
+  () => props.defaultActive,
+  () => {
+    navRoot.activePath = props.defaultActive
+  }
+)
 
 // 导航的栏目更新后重新设置 index
 watch(
   () => navRoot.children,
   () => {
     navRoot.children.forEach((item, index) => {
-      item.updateIndex(index);
-    });
+      item.updateIndex(index)
+    })
   },
   { deep: true }
-);
+)
 
-provide("navRoot", navRoot);
+provide('navRoot', navRoot)
 </script>
 <style lang="scss" scoped>
 .wel_nav-link {
