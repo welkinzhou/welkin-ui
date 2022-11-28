@@ -1,7 +1,7 @@
 <template>
   <div class="wel-container">
     <Header>
-      <WelNavLink :default-active="'/home'" @select="handleSelect">
+      <WelNavLink :default-active="route.fullPath" @select="handleSelect">
         <WelNavItem v-for="item in navItems" :key="item.title" v-bind="item" />
       </WelNavLink>
     </Header>
@@ -17,23 +17,25 @@
  * 基础布局（header, content)
  * author welkin
  */
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from 'vue-router'
 
-import { WelNavLink, WelNavItem } from "@welkin-ui/components";
-import Header from "./header.vue";
+import { WelNavLink, WelNavItem } from '@welkin-ui/components'
+import Header from './header.vue'
+import { onMounted } from 'vue'
 
 const navItems = [
-  { title: "总览", path: "/home" },
-  { title: "文章", path: "/article" },
-];
+  { title: '总览', path: '/home' },
+  { title: '文章', path: '/article' }
+]
 
-const router = useRouter();
+const router = useRouter()
+const route = useRoute()
 
 const handleSelect = (path: string) => {
   router.push({
-    path,
-  });
-};
+    path
+  })
+}
 </script>
 <style lang="scss" scoped>
 .wel-container {
