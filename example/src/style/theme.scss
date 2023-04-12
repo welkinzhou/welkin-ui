@@ -1,8 +1,60 @@
 // 文章主题字体颜色
 $primary-color: #000;
+// 标题颜色
 $title-color: #0c0b22;
+// 次要字体颜色
 $secondary-color: #6e6e7a;
 
 $primary-family: Hiragino Sans GB, arial, helvetica, stheiti, s ans-serif;
 
 $darker-fill: #e6e8eb;
+
+:root {
+  --prism-marker-opacity: 0.6;
+  --title-font-weight: 500;
+}
+
+html:not(.dark) {
+  --primary-background: #f0eee7;
+  --primary-tag-color: #acb7a1;
+  --prism-builtin: #3182bd;
+  --prism-comment: #848486;
+  --prism-deleted: #3182bd;
+  --prism-function: #6196cc;
+  --prism-boolean: #c25205;
+  --prism-number: #c25205;
+  --prism-property: #717c11;
+  --prism-punctuation: #a8a9cc;
+  --prism-keyword: #c792ea;
+  --prism-variable: #0b8235;
+  --prism-url-decoration: #67cdcc;
+  --prism-symbol: green;
+  --prism-selector: #0b8235;
+}
+// 切换 dark theme
+html.dark {
+  --prism-scheme: dark;
+  --prism-foreground: #a6accd;
+  --prism-background: #181818;
+  --prism-comment: #758575;
+  --prism-string: #c3e88d;
+  --prism-literal: #429988;
+  --prism-keyword: #89ddff;
+  --prism-boolean: #6394bf;
+  --prism-number: #6394bf;
+  --prism-variable: #c2b36e;
+  --prism-function: #82aaff;
+  --prism-deleted: #bc6066;
+  --prism-class: #54b1bf;
+  --prism-property: #c792ea;
+  --prism-namespace: #db889a;
+  --prism-punctuation: #89ddff;
+  --prism-decorator: #bd8f8f;
+  --prism-regex: #ab5e3f;
+  --prism-json-property: #6b8b9e;
+  --prism-line-number: #888888;
+  --prism-line-number-gutter: #eeeeee;
+  --prism-line-highlight-background: #444444;
+  --prism-selection-background: #444444;
+  --prism-inline-background: #2d2d2d;
+}

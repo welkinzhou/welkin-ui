@@ -1,14 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import './layout.scss';
 
-ul,
-ol {
-  list-style: none;
-}
+@import './init.scss';
 
-.primary-shadow {
-  border-radius: 8px;
-  box-shadow: 0 0 1px 0 #d4d7de;
-}
+@import './theme.scss';
+
+@import './markdown-style.scss';

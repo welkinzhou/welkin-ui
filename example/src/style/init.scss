@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// 使用 border-box
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+// 保证窗口高度撑开
+html,
+body {
+  height: 100%;
+}
+
+// 调整文字行高
+// 默认是1.2，对于部分有阅读障碍的太挤了
+body {
+  line-height: 1.5;
+  // 禁用 mac 抗锯齿
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+// 表单组件默认不会继承父级字体样式
+// 表现很奇怪，这里修改
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+// 默认换行，是根据单词来的
+// 比如英文中的空格或者 -
+// 没有的话就不会换行
+// 这会导致很长
+// 修改 break-word，哪怕是一个单词也会强制换行
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.primary-shadow {
+  border-radius: 8px;
+  box-shadow: 0 0 1px 0 #d4d7de;
+}

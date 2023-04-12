@@ -9,6 +9,7 @@
     <div class="main">
       <RouterView></RouterView>
     </div>
+    <div class="footer"></div>
   </div>
 </template>
 
@@ -46,11 +47,14 @@ const handleSelect = (path: string) => {
   left: 0;
   display: flex;
   flex-direction: column;
+  background-color: #fafafa;
+  overflow-y: scroll;
+
   .main {
-    background-color: #fafafa;
     box-sizing: border-box;
-    flex: 1;
-    overflow-y: scroll;
+  }
+  .footer {
+    height: 40px;
   }
 }
 </style>

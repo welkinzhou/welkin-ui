@@ -1,12 +1,12 @@
-import { createApp } from "vue";
+import { createApp } from 'vue'
 
-import router from "./router";
-import App from "./App.vue";
-import "./style/index.scss";
-import "./style/markdown-style.scss";
+import router from './router'
+import App from './App.vue'
 
-const app = createApp(App);
+import './style/index.scss'
 
-app.use(router);
+const app = createApp(App)
 
-app.mount("#app");
+app.use(router)
+
+app.mount('#app')
