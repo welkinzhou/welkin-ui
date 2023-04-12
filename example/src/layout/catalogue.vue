@@ -1,7 +1,7 @@
 <template>
   <div class="catalogue">
-    <div class="catalogue-options primary-shadow">
-      <div class="options">栀子</div>
+    <div class="catalogue-options">
+      <div class="options primary-shadow">栀子</div>
     </div>
     <div class="catalogue-wrapper">
       <RouterView />
@@ -20,6 +20,7 @@
   height: 100%;
   display: flex;
   padding: 0 12px;
+  box-sizing: border-box;
   .catalogue-options {
     flex: 0 0 180px;
     margin-top: 80px;

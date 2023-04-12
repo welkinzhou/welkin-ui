@@ -17,6 +17,9 @@
 <script lang="ts" setup></script>
 <style lang="scss" scoped>
 .header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   min-height: 80px;
   box-sizing: border-box;
   padding: 10px 60px;

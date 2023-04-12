@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="artTitle">如何提升设计价值-方法篇</div>
+    <div class="artTitle">SICP笔记</div>
     <div class="artSubTitle">
       <div class="artSubTitle_date">
-        上传日期：<span class="artSubTitle_date_num">2022.10.27</span>
+        上传日期：
+        <span class="artSubTitle_date_num">2022.12.07</span>
       </div>
-      <div class="artSubTitle_focus">
+      <!-- <div class="artSubTitle_focus">
         <i class="artSubTitle_focus_icon"></i>1072
-      </div>
+      </div> -->
     </div>
 
     <div><Article /></div>
@@ -15,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import Article from "@/markdown/SICP/SICP笔记.md";
+import Article from '@/markdown/SICP/SICP笔记.md'
 </script>
 <style lang="scss" scoped>
 .artTitle {
