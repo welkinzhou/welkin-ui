@@ -10,6 +10,7 @@ import { watch, reactive, provide } from 'vue'
 
 const props = defineProps({
   defaultActive: {
+    type: String,
     default: null
   }
 })
@@ -34,7 +35,7 @@ const navRoot = reactive<NavRoot>({
 watch(
   () => props.defaultActive,
   () => {
-    navRoot.activePath = props.defaultActive
+    if (!navRoot.activePath) navRoot.activePath = props.defaultActive
   }
 )
 

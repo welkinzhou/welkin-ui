@@ -1,20 +1,24 @@
 <template>
-  <div class="list-title">列表</div>
-  <div>list state: {{ props.loading }}</div>
-
-  <button @click="updateLoadingHandler">update</button>
+  <div class="list-wrapper">
+    <template v-for="item in props.data">
+      <div :style="itemStyle">
+        <slot :data="item" />
+      </div>
+    </template>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import "../style/index.scss";
-import { listProps, listEmits } from "./list";
+import { computed } from 'vue'
+import '../style/index.scss'
+import { listProps, listEmits } from './list'
 
-const props = defineProps(listProps);
+const props = defineProps(listProps)
 
-const emits = defineEmits(listEmits);
+const emits = defineEmits(listEmits)
 
-const updateLoadingHandler = () => {
-  emits("update:loading", !props.loading);
-  emits("change", !props.loading);
-};
+const itemStyle = computed(() => {
+  const styleStr = `margin-bottom: ${props.gutter}px`
+  return styleStr
+})
 </script>

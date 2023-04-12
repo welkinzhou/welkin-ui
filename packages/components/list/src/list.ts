@@ -1,7 +1,15 @@
 export const listProps = {
+  data: {
+    type: Array,
+    required: true
+  },
   loading: {
     type: Boolean,
-    required: true,
+    required: true
   },
-};
-export const listEmits = ["update:loading", "change"];
+  gutter: {
+    type: Number,
+    default: 8
+  }
+}
+export const listEmits = ['update:loading']

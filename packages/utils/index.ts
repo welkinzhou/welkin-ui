@@ -1,3 +1,7 @@
-export * from "./vue";
+export * from './vue'
 
-export * from "./dom";
+export * from './dom'
+
+export * from './js'
+
+export * from './types'
