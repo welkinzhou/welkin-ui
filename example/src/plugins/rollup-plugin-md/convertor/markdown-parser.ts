@@ -1,5 +1,4 @@
 import MarkdownIt from 'markdown-it'
-import Anchor from 'markdown-it-anchor'
 
 import hljs from 'highlight.js'
 
@@ -29,7 +28,5 @@ const parser = MarkdownIt({
     return '<pre class="hljs"><code>' + parser.utils.escapeHtml(code) + '</code></pre>'
   }
 })
-
-parser.use(Anchor)
 
 export { parser as mdParser }
