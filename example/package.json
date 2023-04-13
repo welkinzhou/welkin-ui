@@ -12,8 +12,7 @@
     "dayjs": "^1.11.7",
     "markdown-it": "^13.0.1",
     "vue": "^3.2.41",
-    "vue-router": "^4.1.6",
-    "vuedraggable": "^4.1.0"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rollup/pluginutils": "^4.2.1",
