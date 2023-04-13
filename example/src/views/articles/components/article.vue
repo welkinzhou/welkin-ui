@@ -17,7 +17,6 @@
 
 <script lang="ts" setup>
 import Article from '@/markdown/SICP/SICP笔记.md'
-console.log('in components', Article)
 </script>
 <style lang="scss" scoped>
 .artTitle {

@@ -16,9 +16,9 @@ const parser = MarkdownIt({
     if (lang && hljs.getLanguage(lang)) {
       try {
         return (
-          '<pre class="hljs"><code>' +
+          '<pre class="hljs">' +
           // 复制代码会报错，直接传入 code 会报错，可能是被解析成 js，还没找到解决办法
-          `<div class="code-heading"><span class="icon lang-display">${lang}</span><svg v-if="false" class="icon clipboard" @click="_copyClipboard"><use xlink:href="#clipboard"></use></svg></div>` +
+          `<div class="code-heading"><span class="icon lang-display">${lang}</span><svg class="icon clipboard" @click="_copyClipboard"><use xlink:href="#clipboard"></use></svg></div><code>` +
           hljs.highlight(code, { language: lang, ignoreIllegals: true }).value +
           '</code></pre>'
         )
