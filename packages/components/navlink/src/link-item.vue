@@ -25,7 +25,7 @@ const props = defineProps({
 const root = inject('navRoot') as NavRoot
 
 const triggerSelect = () => {
-  root.updateActive(props.path)
+  // root.updateActive(props.path)
   root.handleSelect(props.path, props)
 }
 

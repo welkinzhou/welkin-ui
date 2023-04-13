@@ -35,7 +35,7 @@ const navRoot = reactive<NavRoot>({
 watch(
   () => props.defaultActive,
   () => {
-    if (!navRoot.activePath) navRoot.activePath = props.defaultActive
+    navRoot.activePath = props.defaultActive
   }
 )
 
