@@ -11,28 +11,19 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "importHelpers": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "noImplicitAny": false,
+    "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "noEmit": true,
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/**/*.scss"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/**/*.scss"],
+  "exclude": ["src/plugins/rollup-plugin-md/**/*.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-  ],
+  ]
 }

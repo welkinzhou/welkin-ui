@@ -10,7 +10,7 @@ function resolve(relativePath: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/app',
   plugins: [
     mdPlugin(),
     vue({
