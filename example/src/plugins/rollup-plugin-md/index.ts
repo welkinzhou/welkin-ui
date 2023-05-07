@@ -11,7 +11,7 @@ export default function mdPlugin(options: any = {}) {
     name: 'rollup-plugin-md',
     // 指定插件加载顺序  https://cn.vitejs.dev/guide/api-plugin.html #插件顺序
     // vite 官方配置 pre 会在 alias 解析后，官方核心插件加载前调用
-    enforce: 'pre',
+    enforce: 'pre' as 'pre' | 'post',
     configResolved(resolvedConfig) {
       // 存储最终解析的配置
       config = resolvedConfig

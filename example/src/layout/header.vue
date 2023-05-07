@@ -28,6 +28,9 @@
   width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: saturate(50%) blur(8px);
+  box-shadow: 0 2px 4px #00000014;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, sans-serif;
 
   &.is-fix {
     box-shadow: 0 1px 2px rgba(84, 84, 102, 20%);

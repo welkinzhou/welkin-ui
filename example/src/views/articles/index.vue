@@ -2,7 +2,7 @@
   <div class="blog-wrapper">
     <div class="blog-left"></div>
     <div class="blog-article">
-      <Article />
+      <RouterView />
     </div>
     <div class="blog-right"></div>
   </div>
@@ -13,7 +13,6 @@
  * 文章页面
  * author welkin
  */
-import Article from "./components/article.vue";
 </script>
 <style lang="scss" scoped>
 .blog-wrapper {
@@ -28,8 +27,10 @@ import Article from "./components/article.vue";
   }
   .blog-article {
     flex-grow: 1;
-    background-color: #fff;
     padding: 40px;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 2px #f1f1f1;
+    border-radius: 8px;
   }
   .blog-right {
     flex-basis: 180px;

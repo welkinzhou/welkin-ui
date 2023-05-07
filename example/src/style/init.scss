@@ -7,11 +7,13 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::after,
 *::before {
   box-sizing: inherit;
 }
+
 // 保证窗口高度撑开
 html,
 body {
@@ -24,6 +26,8 @@ body {
   line-height: 1.5;
   // 禁用 mac 抗锯齿
   -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 img,
@@ -34,6 +38,7 @@ canvas {
   display: block;
   max-width: 100%;
 }
+
 // 表单组件默认不会继承父级字体样式
 // 表现很奇怪，这里修改
 input,
@@ -42,6 +47,7 @@ textarea,
 select {
   font: inherit;
 }
+
 // 默认换行，是根据单词来的
 // 比如英文中的空格或者 -
 // 没有的话就不会换行
@@ -64,5 +70,5 @@ ol {
 
 .primary-shadow {
   border-radius: 8px;
-  box-shadow: 0 0 1px 0 #d4d7de;
+  box-shadow: 0 0 0 1px #d4d7de;
 }

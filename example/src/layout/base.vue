@@ -7,7 +7,7 @@
     </Header>
 
     <div class="main">
-      <RouterView></RouterView>
+      <RouterView />
     </div>
     <div class="footer"></div>
   </div>
@@ -22,11 +22,10 @@ import { useRoute, useRouter } from 'vue-router'
 
 import { WelNavLink, WelNavItem } from '@welkin-ui/components'
 import Header from './header.vue'
-import { onMounted } from 'vue'
 
 const navItems = [
-  { title: '总览', path: '/home' },
-  { title: '文章', path: '/article' }
+  { title: '总览', path: '/home' }
+  // { title: '文章', path: '/article' }
 ]
 
 const router = useRouter()
@@ -52,6 +51,7 @@ const handleSelect = (path: string) => {
 
   .main {
     box-sizing: border-box;
+    flex-grow: 1;
   }
   .footer {
     height: 40px;

@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import Article from '@/markdown/SICP/SICP笔记.md'
+import Article from './md/index.md'
 </script>
 <style lang="scss" scoped>
 .artTitle {
