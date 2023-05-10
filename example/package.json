@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "sync": "rsync -avz --delete-after dist/ root@106.52.66.51:/app",
     "preview": "vite preview"
   },
   "dependencies": {
