@@ -34,6 +34,7 @@
     }
     .catalogue-options {
       padding: 40px 20px;
+      min-width: 270px;
       .options {
         background-color: #fff;
         text-align: right;
