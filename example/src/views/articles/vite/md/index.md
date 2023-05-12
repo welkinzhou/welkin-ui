@@ -1,5 +1,3 @@
-## Vite 插件
-
 现在大家写博客，都习惯了写 Markdown 文件。一个将 md 文件转换成 html，或者 vue 组件的插件就必不可少。
 
 本来我是使用 [vite-plugin-md](https://github.com/antfu/vite-plugin-md) 这个官方插件，引入后也成功将 md 转化成了 vue 组件

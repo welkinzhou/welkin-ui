@@ -1,5 +1,3 @@
-## Haskell
-
 **常用操作：** Haskell 的文件使用 .hs 结尾。Haskell 提供一个运行环境 - ghci，使用命令 `ghci` 启用，可以进行简单的交互，
 也可以使用命令 `:l fileName.hs`，加载 Haskell 文件，`ghc` 是编译 .hs 文件的命令。
 

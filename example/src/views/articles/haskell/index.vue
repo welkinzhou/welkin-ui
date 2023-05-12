@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="artTitle">SICP笔记</div>
+    <div class="artTitle">Haskell</div>
     <div class="artSubTitle">
       <div class="artSubTitle_date">
         上传日期：
-        <span class="artSubTitle_date_num">2022.12.07</span>
+        <span class="artSubTitle_date_num">2022.11.10</span>
       </div>
       <!-- <div class="artSubTitle_focus">
         <i class="artSubTitle_focus_icon"></i>1072
