@@ -14,7 +14,7 @@ export default defineConfig({
   plugins: [
     mdPlugin(),
     vue({
-      include: [/\.vue$/, /\.md$/] // <--
+      include: [/\.vue$/, /\.md$/]
     })
   ],
   // 配置 path alias

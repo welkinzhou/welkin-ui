@@ -4,6 +4,7 @@
  */
 
 export const htmlToSFC = (template, file) => {
+  // console.log(template)
   return `
   <template> 
     <div class="markdown-body">
@@ -20,15 +21,28 @@ export const htmlToSFC = (template, file) => {
         const target = e.currentTarget.parentNode.parentNode.querySelector('code')
         const text = target.innerText
         navigator?.clipboard?.writeText(text)
+        if (e.target === e.currentTarget) {
+          const div = document.createElement("div");
+          div.classList.add("toast");
+          const textContent = document.createTextNode("复制成功！");
+          div.appendChild(textContent);
+  
+          e.target.parentNode.appendChild(div);
+  
+          setTimeout(() => {
+            e.target.parentNode.removeChild(div);
+          }, 500);
+        }
     }
   </script>
-  <style lang="scss" scoped>
+  <style lang="scss">
     .code-heading {
         display: flex;
         align-items: center;
         justify-content: end;
         color: #393a34;
         line-height: 1rem;
+        position: relative;
         .icon +.icon{
             margin-left: 0.2rem;
         }
@@ -50,7 +64,18 @@ export const htmlToSFC = (template, file) => {
             overflow-x: auto;
         }
     }
-    
+    .toast {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transform: scale(0.9) translate(50%, 10%);
+    }
   </style>
 `
 }
