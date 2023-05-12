@@ -5,7 +5,8 @@ import hljs from 'highlight.js'
 // 使用 markdown-it 将 md 文件转化为 html
 const parser = MarkdownIt({
   // Enable HTML tags in source
-  html: true,
+  // 开启后 lisp 相关语言会在 vue 单文件编译时候报错
+  html: false,
   // Use '/' to close single tags (<br />).
   xhtmlOut: true,
   // Autoconvert URL-like text to links
