@@ -15,6 +15,11 @@ export default function (plop) {
         type: 'input',
         name: 'name',
         message: 'page name please'
+      },
+      {
+        type: 'input',
+        name: 'title',
+        message: 'article title please'
       }
     ],
     actions: [
