@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "sync": "rsync -avz --delete-after dist/ root@106.52.66.51:/app",
+    "preview": "vite preview",
+    "gen": "plop"
   },
   "dependencies": {
     "dayjs": "^1.11.7",
@@ -22,6 +24,7 @@
     "fp-ts": "^2.12.1",
     "highlight.js": "^11.7.0",
     "inferred-types": "^0.22.0",
+    "plop": "^3.1.2",
     "typescript": "^4.6.4",
     "vite": "^4.0.0",
     "vue-tsc": "^1.0.9"

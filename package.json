@@ -3,6 +3,7 @@
   "packageManager": "pnpm@7.8.0",
   "scripts": {
     "start": "pnpm -C example dev",
+    "build": "pnpm -C example build",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "prepare": "husky install"

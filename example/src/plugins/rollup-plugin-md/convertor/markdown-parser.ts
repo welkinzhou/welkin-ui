@@ -5,7 +5,8 @@ import hljs from 'highlight.js'
 // 使用 markdown-it 将 md 文件转化为 html
 const parser = MarkdownIt({
   // Enable HTML tags in source
-  html: true,
+  // 开启后 lisp 相关语言会在 vue 单文件编译时候报错
+  html: false,
   // Use '/' to close single tags (<br />).
   xhtmlOut: true,
   // Autoconvert URL-like text to links
@@ -18,7 +19,9 @@ const parser = MarkdownIt({
         return (
           '<pre class="hljs">' +
           // 复制代码会报错，直接传入 code 会报错，可能是被解析成 js，还没找到解决办法
-          `<div class="code-heading"><span class="icon lang-display">${lang}</span><svg class="icon clipboard" @click="_copyClipboard"><use xlink:href="#clipboard"></use></svg></div><code>` +
+          `<div class="code-heading">
+            <span class="icon lang-display">${lang}</span><svg class="icon clipboard" @click="_copyClipboard"><use xlink:href="#clipboard"></use></svg>
+           </div><code v-pre>` +
           hljs.highlight(code, { language: lang, ignoreIllegals: true }).value +
           '</code></pre>'
         )

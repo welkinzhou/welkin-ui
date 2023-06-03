@@ -1,5 +1,5 @@
 <template>
-  <div class="wel-container">
+  <div class="wel-container" ref="scrollRef">
     <Header>
       <WelNavLink :default-active="route.fullPath" @select="handleSelect">
         <WelNavItem v-for="item in navItems" :key="item.title" v-bind="item" />
@@ -22,6 +22,7 @@
  * 基础布局（header, content)
  * author welkin
  */
+import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 import { WelNavLink, WelNavItem } from '@welkin-ui/components'
@@ -34,6 +35,15 @@ const navItems = [
 
 const router = useRouter()
 const route = useRoute()
+
+const scrollRef = ref()
+
+watch(
+  () => route.fullPath,
+  val => {
+    scrollRef.value.scrollTop = 0
+  }
+)
 
 const handleSelect = (path: string) => {
   router.push({

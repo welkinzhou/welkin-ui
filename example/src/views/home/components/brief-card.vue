@@ -50,6 +50,8 @@ const clickHandler = () => {
   display: flex;
   .card-img {
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
   }
   .card-content {
     padding: 26px 24px;
@@ -61,7 +63,6 @@ const clickHandler = () => {
     }
     .main {
       margin: 12px 0;
-      height: 150px;
     }
     .date {
       margin-top: 4px;

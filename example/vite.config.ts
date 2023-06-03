@@ -10,11 +10,11 @@ function resolve(relativePath: string) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/app',
+  base: '/',
   plugins: [
     mdPlugin(),
     vue({
-      include: [/\.vue$/, /\.md$/] // <--
+      include: [/\.vue$/, /\.md$/]
     })
   ],
   // 配置 path alias

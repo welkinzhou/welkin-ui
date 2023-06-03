@@ -24,7 +24,6 @@ export default function mdPlugin(options: any = {}) {
     // id 是文件的绝对路径
     async transform(code, id) {
       if (!filter(id)) return
-
       try {
         // 转换文件到
         return await markdownToVue(config)(id, code)
