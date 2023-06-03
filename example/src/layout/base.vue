@@ -9,7 +9,11 @@
     <div class="main">
       <RouterView />
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+      <div class="footer-bg">
+        <a target="_blank" href="https://beian.miit.gov.cn">粤ICP备2023059245号-1</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -55,6 +59,16 @@ const handleSelect = (path: string) => {
   }
   .footer {
     height: 40px;
+    color: #999;
+    &-bg {
+      text-align: center;
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 10px;
+      a {
+        color: #999;
+      }
+    }
   }
 }
 </style>
