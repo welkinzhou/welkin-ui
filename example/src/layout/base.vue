@@ -11,7 +11,18 @@
     </div>
     <div class="footer">
       <div class="footer-bg">
-        <a target="_blank" href="https://beian.miit.gov.cn">粤ICP备2023059245号-1</a>
+        <a target="_blank" href="https://beian.miit.gov.cn">粤ICP备2023059245号-1 |</a>
+
+        <a
+          target="_blank"
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502010080"
+          style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px"
+        >
+          <img src="@/assets/备案图标.png" style="float: left" />
+          <p style="float: left; height: 20px; line-height: 20px; margin: 0px 0px 0px 5px; color: #939393">
+            粤公网安备 44030502010080号
+          </p>
+        </a>
       </div>
     </div>
   </div>
@@ -71,12 +82,17 @@ const handleSelect = (path: string) => {
     height: 40px;
     color: #999;
     &-bg {
-      text-align: center;
       font-size: 14px;
       line-height: 14px;
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       a {
         color: #999;
+      }
+      a + a {
+        margin-left: 6px;
       }
     }
   }
