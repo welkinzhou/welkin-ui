@@ -1,8 +1,8 @@
 <template>
   <div class="brief" @click="clickHandler">
-    <div class="card-img">
+    <!-- <div class="card-img">
       <img class="cover-img" :src="picture" alt="cover" />
-    </div>
+    </div> -->
     <div class="card-content">
       <h4 class="title">{{ title }}</h4>
       <div class="main">
@@ -15,14 +15,12 @@
 </template>
 
 <script lang="ts" setup>
-import defaultImgSrc from '@/assets/image/bamboo.jpg'
 import { useRouter } from 'vue-router'
 interface Props {
   title?: string
   summary?: string
   date?: string
   author?: string
-  picture?: string
   path?: string
 }
 const props = withDefaults(defineProps<Props>(), {
@@ -30,7 +28,6 @@ const props = withDefaults(defineProps<Props>(), {
   summary: '你来人间一趟，你要看看太阳',
   date: '1985年1月',
   author: '查海生',
-  picture: defaultImgSrc,
   path: '/article/sicp'
 })
 const router = useRouter()
