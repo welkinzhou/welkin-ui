@@ -8,6 +8,8 @@
   "include": [
     "vite.config.ts",
     // 打包配置需要包括插件
-    "src/plugins/rollup-plugin-md/**/*.ts"
+    "src/plugins/rollup-plugin-md/**/*.ts",
+    "plopfile.js",
+    "routeMerge.js"
   ]
 }

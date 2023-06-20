@@ -1,3 +1,5 @@
+import routeMerge from './routeMerge.js'
+
 export default function (plop) {
   plop.setHelper('formatDate', function () {
     const today = new Date()
@@ -31,6 +33,9 @@ export default function (plop) {
       {
         type: 'add',
         path: 'src/views/articles/{{dashCase name}}/md/index.md'
+      },
+      function generateRoute(answers) {
+        routeMerge(answers.name)
       }
     ]
   })
