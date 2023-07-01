@@ -12,6 +12,22 @@ import briefCard from './components/brief-card.vue'
 
 const list = [
   {
+    title: '算法学习',
+    summary:
+      '很多时候，不知道怎么优化代码。如今想来，只是能力未到。就和那个老生常谈的问题一样，学微积分，学物理有什么用。你要先学会才知道有什么用，学会了就是广阔天地，大有作为。没有学过，整日柴米油盐，当然也就没有，杀鸡焉用牛刀。算法的学习，亦是如此。',
+    date: '2023-06-12',
+    author: 'welkin',
+    path: '/article/algorithm'
+  },
+  {
+    title: 'ThreeJS 学习',
+    summary:
+      '人生中总会有几个节点，突然间大梦初醒。做了前端也有段时间了，整日埋首那些简单的后台系统之间，竟也有些忘了自己为何做前端。至今记得当时决意做前端，使看了 Apple 的 AirPods Pro 产品页，这也太 cool 了。如今看到 ThreeJS 一样的触动，希望能走的更远。',
+    date: '2023-06-10',
+    author: 'welkin',
+    path: '/article/three'
+  },
+  {
     title: 'SICP',
     summary:
       '一直有听说 SICP 的大名，闲来无事时，也买了一本看看，可惜并没有看完。在这个过程中也产生了一些思考，简单记录下，也期待我把这个笔记补完的一天。',

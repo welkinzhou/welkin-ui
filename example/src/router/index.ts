@@ -6,10 +6,12 @@ const routes = [
   {
     path: '/',
     redirect: '/home',
+    meta: { cache: true },
     component: () => import('@/layout/catalogue.vue'),
     children: [
       {
         path: '/home',
+        meta: { cache: true },
         component: () => import('@/views/home/index.vue'),
         children: []
       }

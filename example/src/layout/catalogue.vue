@@ -38,15 +38,20 @@ let timer,
   count = 1
 
 watch(scroller, el => {
-  if (el) {
+  const done = sessionStorage.getItem('title-loaded')
+
+  if (el && !done) {
     timer = setInterval(() => {
       if (count === slogan.length) {
         clearInterval(timer)
+        sessionStorage.setItem('title-loaded', 'done')
       }
       const str = slogan.slice(0, count)
       el.innerText = str
       count++
     }, 200)
+  } else {
+    el.innerText = slogan
   }
 })
 </script>

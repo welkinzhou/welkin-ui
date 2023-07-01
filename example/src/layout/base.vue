@@ -7,7 +7,13 @@
     </Header>
 
     <div class="main">
-      <RouterView />
+      <!-- <RouterView /> -->
+      <RouterView v-slot="{ Component, route }">
+        <keep-alive v-if="route.meta.cache">
+          <component :is="Component" :key="route.path" />
+        </keep-alive>
+        <component v-else :is="Component" :key="route.path" />
+      </RouterView>
     </div>
     <div class="footer">
       <div class="footer-bg">
