@@ -19,8 +19,6 @@ python3 -m http.server
 
 Talk is cheap, show me the code。首先创建一个简单场景，添加几个物体和摄像机，下面是会用到的一些对象，和基础概念
 
-![对象](./基础对象.png)
-
 代码如下（需要下载 Three.js 库）：
 
 ```html
@@ -473,8 +471,6 @@ const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 > Tips: 到底是使用四边形还是三角形来创建面，在三维建模领域里一直存在比较大的争议。基本上，大家都习惯于用四边形来创建面，
 > 因为它比三角形更容易增强和平滑。但是对于渲染器和游戏引擎来说，使用三角形更加容易，因为三角形渲染起来效率更高。
 
-<img src="./spherre.png" alt="球缓冲几何体" style="zoom:50%;" />
-
 在 Three.js 中也提供了通过点和面来创建几何体的方法（原文中的方法，使用 THREE.Face3，当前已被废弃，这里使
 用[迁移](https://sbcode.net/threejs/geometry-to-buffergeometry/#threegeometry_2)后的方法）：
 
@@ -850,8 +846,6 @@ Three.js 提供了一些摄像机，这里常用的就是正交投影摄像机�
 - zoom 代表变焦（官网上构造函数已经移除这个参数，但是可以调用 zoom 方法），使用 zoom 可以放大缩小场景，如果值小于 1，场
   景会缩小，高于 1 会被放大。如果是负数，场景会上下颠倒。推荐默认值：1。
 
-<img src="./视场示意图.png" alt="视场示意图" style="zoom:40%;" />
-
 接下来是 OrthographicCamera，如果要配置正交投影摄像机，我们需要使用其他的一些属性。由于正交投影摄像机渲染出的物体大小都
 是一样的，所以它并不关心使用什么长宽比，或者以什么样的视角来观察场景。当使用正交投影摄像机时，你要定义的是一个需要被渲染
 的方块区域
@@ -868,8 +862,6 @@ Three.js 提供了一些摄像机，这里常用的就是正交投影摄像机�
 - near 近面距离，渲染场景的起点
 - far 远面距离，渲染场景结束点
 - zoom 和 PerspectiveCamera 的 zoom 一样
-
-<img src="./正交视场.png" alt="正交视场" style="zoom:50%;" />
 
 ##### 2.3.2 将摄像机聚焦在指定点上 2.3.2 将摄像机聚焦在指定点上
 
