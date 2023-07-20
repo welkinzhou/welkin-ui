@@ -4,8 +4,8 @@
  */
 
 export const htmlToSFC = (template, file) => {
-  // 替换 {{ }}，防止转换成 vue sfc 进行插值
-  template = template.replaceAll('{{', '<span>{</span><span>{</span>').replaceAll('}}', '<span>}</span><span>}</span>')
+  // 代码块插入 v-pre，防止被当作 vue 语法执行
+  template = template.replaceAll('<code>', '<code v-pre>')
   return `
   <template> 
     <div class="markdown-body">
